@@ -186,9 +186,10 @@ class Workspace(object):
                 self.agent.save(self.model_save_dir, self.step)
 
 
-@hydra.main(config_path="config.yaml", strict=True)
+@hydra.main(config_path="./config.yaml")
 def main(cfg):
     from train import Workspace as W
+    print(cfg)
 
     workspace = W(cfg)
     workspace.run()

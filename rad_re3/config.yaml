@@ -112,6 +112,5 @@ random_encoder:
 
 # hydra configuration
 hydra:
-  name: ${env}
   run:
     dir: ./${logdir}/${now:%Y.%m.%d}/${now:%H%M%S}_${hydra.job.override_dirname}
